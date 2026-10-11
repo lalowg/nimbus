@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 262 96" width="262" height="96" role="img" aria-labelledby="t">
+<title id="t">NIMBUS</title>
+<rect width="262" height="96" rx="10" fill="#061A40"/>
+<g transform="translate(16 16)"><path d="M17 46h30a11 11 0 0 0 1.6-21.9A16 16 0 0 0 18.4 21 12.5 12.5 0 0 0 17 46Z" fill="none" stroke="#F5F9FF" stroke-width="3" stroke-linejoin="round"/><path d="M18 36h9v-7h10v7h9" fill="none" stroke="#3FA9F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="36" r="3.2" fill="#3FA9F5"/><circle cx="46" cy="36" r="3.2" fill="#2EE59D"/><rect x="30" y="26.5" width="4.5" height="4.5" fill="#F5F9FF"/></g>
+<g transform="translate(96 36)" fill="none" stroke="#F5F9FF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path transform="translate(0 0)" d="M0 24V0l17 24V0"/><path transform="translate(27 0)" d="M0 0v24"/><path transform="translate(37 0)" d="M0 24V0l11 15L22 0v24"/><path transform="translate(69 0)" d="M0 0v24h9.5a6 6 0 0 0 0-12H0M0 12h8.5a6 6 0 0 0 0-12H0"/><path transform="translate(94.5 0)" d="M0 0v15a8.5 8.5 0 0 0 17 0V0"/><path transform="translate(121.5 0)" d="M15.5 4.2C14 1.6 11.6 0 8.6 0 4.6 0 1.6 2.4 1.6 6.2c0 7.6 14.4 4.4 14.4 11.6 0 3.8-3.2 6.2-7.4 6.2-3.4 0-6.2-1.6-7.8-4.6"/></g>
+<circle cx="241.5" cy="58" r="2.6" fill="#2EE59D"/>
+</svg>

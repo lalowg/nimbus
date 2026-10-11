@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.classList.add('js');</script>
+<title>NIMBUS — Your Business, in the Cloud</title>
+<meta name="description" content="NIMBUS is cloud infrastructure for growing teams. Design your architecture in a live console, watch traffic flow and re-route, and compare plans. An interactive concept.">
+<meta name="theme-color" content="#061A40">
+<link rel="canonical" href="https://nimbus-olive-five.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NIMBUS">
+<meta property="og:title" content="NIMBUS — Your Business, in the Cloud">
+<meta property="og:description" content="Sketch your infrastructure, then watch it run. A live topology console where every setting re-routes traffic and updates simulated metrics.">
+<meta property="og:url" content="https://nimbus-olive-five.vercel.app/">
+<meta property="og:image" content="https://nimbus-olive-five.vercel.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NIMBUS — Your Business, in the Cloud">
+<meta name="twitter:description" content="A live infrastructure console: change the dials and watch traffic re-route, fleets scale and costs update.">
+<meta name="twitter:image" content="https://nimbus-olive-five.vercel.app/og.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500;600&family=Urbanist:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="nb-mark" viewBox="0 0 64 64">
+    <path d="M17 46h30a11 11 0 0 0 1.6-21.9A16 16 0 0 0 18.4 21 12.5 12.5 0 0 0 17 46Z" fill="none" stroke="#F5F9FF" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M18 36h9v-7h10v7h9" fill="none" stroke="#3FA9F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="18" cy="36" r="3.2" fill="#3FA9F5"/>
+    <circle cx="46" cy="36" r="3.2" fill="#2EE59D"/>
+    <rect x="30" y="26.5" width="4.5" height="4.5" fill="#F5F9FF"/>
+  </symbol>
+</svg>
+
+<header class="topbar" data-header>
+  <a class="brand" href="#console" aria-label="NIMBUS home — back to the console">
+    <svg class="brand-mark" aria-hidden="true" focusable="false"><use href="#nb-mark"/></svg>
+    <span class="brand-word" aria-hidden="true">NIMBUS</span>
+  </a>
+  <nav class="site-nav" aria-label="Primary">
+    <ul>
+      <li><a href="#console">Console</a></li>
+      <li><a href="#architecture">Architecture</a></li>
+      <li><a href="#drill">Drill</a></li>
+      <li><a href="#plans">Plans</a></li>
+      <li><a href="#migration">Migration</a></li>
+    </ul>
+  </nav>
+  <div class="topbar-tools">
+    <p class="status-chip"><span class="live-dot" aria-hidden="true"></span>Demo environment</p>
+    <a class="btn btn-primary header-cta" href="#review">Book a review</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-menu-btn><span class="menu-icon" aria-hidden="true"><i></i><i></i></span><span>Menu</span></button>
+  </div>
+</header>
+
+<div class="menu-panel" id="menu" hidden>
+  <nav aria-label="Mobile">
+    <ol class="menu-list">
+      <li><a href="#console"><span>01</span>Console</a></li>
+      <li><a href="#architecture"><span>02</span>Architecture</a></li>
+      <li><a href="#drill"><span>03</span>Drill</a></li>
+      <li><a href="#plans"><span>04</span>Plans</a></li>
+      <li><a href="#migration"><span>05</span>Migration</a></li>
+      <li><a href="#review"><span>06</span>Book a review</a></li>
+    </ol>
+  </nav>
+  <p class="menu-note">Fictional concept brand — portfolio project.</p>
+</div>
+
+<main id="main" tabindex="-1">
+
+  <!-- ============ 01 CONSOLE (signature) ============ -->
+  <section class="hero" id="console" aria-labelledby="hero-title" data-console>
+    <div class="hero-head">
+      <div class="hh-copy">
+        <p class="eyebrow"><span class="eb-k">NIMBUS</span>Cloud infrastructure for growing teams</p>
+        <h1 id="hero-title" class="hero-title"><span class="ht-a">Your business,</span> <span class="ht-b">in the cloud.</span></h1>
+      </div>
+      <div class="hh-side">
+        <p class="lede">Sketch your infrastructure the way you would on a whiteboard, then watch it run. Change a setting and NIMBUS re-routes traffic, resizes the fleet and tells you what it costs.</p>
+        <p class="sim-note"><span class="live-dot" aria-hidden="true"></span>Live simulation · illustrative model, not a benchmark</p>
+      </div>
+    </div>
+
+    <div class="console">
+      <div class="console-bar" aria-hidden="true">
+        <span class="cb-dots"><i></i><i></i><i></i></span>
+        <span class="cb-path">nimbus / console / <b>production-demo</b></span>
+        <span class="cb-env">us-east · eu-central · ap-south</span>
+      </div>
+
+      <form class="panel cfg" data-config aria-labelledby="cfg-title" novalidate>
+        <div class="panel-head"><h2 class="panel-t" id="cfg-title">Configure</h2><span class="panel-k">Inputs</span></div>
+        <div class="presets" role="group" aria-label="Load a preset">
+          <button type="button" data-preset="launch" aria-pressed="false">Launch</button>
+          <button type="button" data-preset="growth" aria-pressed="false">Growth</button>
+          <button type="button" data-preset="global" aria-pressed="false">Global</button>
+        </div>
+        <div class="ctl">
+          <div class="ctl-row"><label for="c-traffic">Traffic</label><output data-out="traffic" for="c-traffic">6,000 req/s</output></div>
+          <input id="c-traffic" name="traffic" type="range" min="0" max="1000" step="1" value="652">
+          <div class="ticks" aria-hidden="true"><span>100</span><span>2k</span><span>60k</span></div>
+        </div>
+        <fieldset class="ctl">
+          <legend>Regions</legend>
+          <div class="seg">
+            <label><input type="radio" name="regions" value="1" checked><span>1</span></label>
+            <label><input type="radio" name="regions" value="2"><span>2</span></label>
+            <label><input type="radio" name="regions" value="3"><span>3</span></label>
+          </div>
+        </fieldset>
+        <div class="ctl">
+          <div class="ctl-row"><label for="c-instances">App instances / region</label><output data-out="instances" for="c-instances">5 (auto)</output></div>
+          <input id="c-instances" name="instances" type="range" min="1" max="12" step="1" value="4">
+          <label class="sw"><input id="c-autoscale" name="autoscale" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span><span>Autoscale</span></label>
+        </div>
+        <div class="ctl switches">
+          <label class="sw"><input id="c-cdn" name="cdn" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span><span>Global edge (CDN)</span></label>
+          <label class="sw"><input id="c-cache" name="cache" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span><span>Managed cache</span></label>
+          <label class="sw"><input id="c-async" name="async" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span><span>Queue + workers</span></label>
+        </div>
+        <div class="ctl">
+          <div class="ctl-row"><label for="c-replicas">Read replicas</label><output data-out="replicas" for="c-replicas">1</output></div>
+          <input id="c-replicas" name="replicas" type="range" min="0" max="3" step="1" value="1">
+        </div>
+        <button type="button" class="chaos" data-outage aria-pressed="false">
+          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 2 1.5 17h17z"/><path d="M10 8v4M10 14.5v.5"/></svg>
+          <span data-outage-label>Simulate zone outage</span>
+        </button>
+      </form>
+
+      <div class="panel topo">
+        <div class="panel-head">
+          <h2 class="panel-t">Topology</h2>
+          <ul class="legend" aria-label="Legend">
+            <li><i class="lg-req" aria-hidden="true"></i>Request</li>
+            <li><i class="lg-res" aria-hidden="true"></i>Response</li>
+            <li><i class="lg-err" aria-hidden="true"></i>Rejected</li>
+            <li><i class="lg-rep" aria-hidden="true"></i>Replication</li>
+          </ul>
+        </div>
+        <div class="topo-area" data-topo>
+          <canvas aria-hidden="true"></canvas>
+          <div class="nodes" data-nodes role="group" aria-label="Infrastructure components, in the order traffic flows. Select one to inspect it."></div>
+          <aside class="inspector" data-inspector hidden aria-label="Component inspector">
+            <div class="in-head">
+              <p class="in-name" data-i-name>Component</p>
+              <button type="button" class="in-close" data-i-close aria-label="Close inspector"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 2l8 8M10 2l-8 8"/></svg></button>
+            </div>
+            <p class="in-status">Status <b data-i-status data-status="ok">healthy</b></p>
+            <p class="in-role" data-i-role></p>
+            <dl class="in-stats" data-i-stats></dl>
+          </aside>
+        </div>
+        <p class="sr-only" data-route-summary></p>
+        <p class="sr-only" aria-live="polite" data-announce></p>
+        <div class="log">
+          <p class="log-t">Event log</p>
+          <ol class="log-list" data-log aria-live="polite" aria-label="Event log"></ol>
+        </div>
+      </div>
+
+      <div class="panel telemetry" aria-labelledby="tel-title">
+        <div class="panel-head"><h2 class="panel-t" id="tel-title">Telemetry</h2><span class="sim-chip">Simulated</span></div>
+        <div class="metric" data-mc="p95">
+          <p class="m-k">p95 latency</p>
+          <p class="m-v"><span data-m="p95">89</span><small>ms</small></p>
+          <canvas class="spark" data-spark aria-hidden="true"></canvas>
+        </div>
+        <dl class="m-grid">
+          <div data-mc="served"><dt>Served</dt><dd><span data-m="served">6,000</span><small>req/s</small></dd></div>
+          <div data-mc="err"><dt>Error rate</dt><dd><span data-m="err">0.01</span><small>%</small></dd></div>
+          <div><dt>Availability target</dt><dd><span data-m="avail">99.90</span><small>%</small></dd></div>
+          <div><dt>Cache hit ratio</dt><dd><span data-m="hit">84</span><small>%</small></dd></div>
+          <div><dt>App instances</dt><dd><span data-m="inst">5</span><small>total</small></dd></div>
+          <div><dt>Est. monthly cost</dt><dd><small class="cur">€</small><span data-m="cost">750</span></dd></div>
+        </dl>
+        <div class="headroom" data-mc="head">
+          <p class="m-k">Capacity headroom <b><span data-m="head">45</span>%</b></p>
+          <div class="hbar" data-head-bar aria-hidden="true"><i></i></div>
+        </div>
+        <a class="plan-fit" href="#plans" data-plan-link>This setup fits <b data-plan-name>Scale</b><span aria-hidden="true"> →</span></a>
+        <p class="m-note">Illustrative model of a fictional service. Not a benchmark, an SLA or a quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 ARCHITECTURE ============ -->
+  <section class="arch" id="architecture" aria-labelledby="arch-title">
+    <div class="arch-figure">
+      <div class="arch-sticky">
+        <p class="kicker"><span class="k-no">02</span>Architecture</p>
+        <h2 id="arch-title" class="h2">Five layers, one diagram</h2>
+        <svg class="stack" viewBox="0 0 560 560" role="img" aria-label="Five stacked platform layers: edge, compute, data, async and observe. The layer being described is highlighted." data-stack>
+          <defs>
+            <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="rgba(245,249,255,0.35)"/></pattern>
+          </defs>
+          <g class="plate" data-layer="0" transform="translate(0 20)">
+            <path class="pl-side" d="M60 60 240 120 420 60 420 72 240 132 60 72Z"/>
+            <path class="pl-top" d="M60 60 240 0 420 60 240 120Z"/>
+            <g class="pl-art"><circle cx="160" cy="58" r="12"/><circle cx="240" cy="38" r="12"/><circle cx="320" cy="58" r="12"/><circle cx="240" cy="80" r="12"/><path d="M148 58h24M240 26v24M308 58h24M228 80h24"/></g>
+            <path class="pl-lead" d="M420 60h40"/><text class="pl-label" x="468" y="56">01</text><text class="pl-name" x="468" y="74">Edge</text>
+          </g>
+          <g class="plate" data-layer="1" transform="translate(0 120)">
+            <path class="pl-side" d="M60 60 240 120 420 60 420 72 240 132 60 72Z"/>
+            <path class="pl-top" d="M60 60 240 0 420 60 240 120Z"/>
+            <g class="pl-art"><path d="M150 60l30-10 30 10-30 10zM210 40l30-10 30 10-30 10zM270 60l30-10 30 10-30 10zM210 80l30-10 30 10-30 10z"/></g>
+            <path class="pl-lead" d="M420 60h40"/><text class="pl-label" x="468" y="56">02</text><text class="pl-name" x="468" y="74">Compute</text>
+          </g>
+          <g class="plate" data-layer="2" transform="translate(0 220)">
+            <path class="pl-side" d="M60 60 240 120 420 60 420 72 240 132 60 72Z"/>
+            <path class="pl-top" d="M60 60 240 0 420 60 240 120Z"/>
+            <g class="pl-art"><ellipse cx="190" cy="52" rx="20" ry="7"/><path d="M170 52v16c0 4 9 7 20 7s20-3 20-7V52"/><ellipse cx="290" cy="52" rx="20" ry="7"/><path d="M270 52v16c0 4 9 7 20 7s20-3 20-7V52"/><path d="M212 62h56" stroke-dasharray="3 4"/></g>
+            <path class="pl-lead" d="M420 60h40"/><text class="pl-label" x="468" y="56">03</text><text class="pl-name" x="468" y="74">Data</text>
+          </g>
+          <g class="plate" data-layer="3" transform="translate(0 320)">
+            <path class="pl-side" d="M60 60 240 120 420 60 420 72 240 132 60 72Z"/>
+            <path class="pl-top" d="M60 60 240 0 420 60 240 120Z"/>
+            <g class="pl-art"><path d="M150 60h26M186 60h26M222 60h26M258 60h26"/><path d="M300 50l14 10-14 10"/><rect x="148" y="54" width="10" height="12"/><rect x="184" y="54" width="10" height="12"/><rect x="220" y="54" width="10" height="12"/></g>
+            <path class="pl-lead" d="M420 60h40"/><text class="pl-label" x="468" y="56">04</text><text class="pl-name" x="468" y="74">Async</text>
+          </g>
+          <g class="plate" data-layer="4" transform="translate(0 420)">
+            <path class="pl-side" d="M60 60 240 120 420 60 420 72 240 132 60 72Z"/>
+            <path class="pl-top" d="M60 60 240 0 420 60 240 120Z"/>
+            <g class="pl-art"><path d="M130 64l22-8 18 14 22-26 20 18 20-10 22 16 22-12 22 6 22-4"/></g>
+            <path class="pl-lead" d="M420 60h40"/><text class="pl-label" x="468" y="56">05</text><text class="pl-name" x="468" y="74">Observe</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <ol class="arch-steps">
+      <li class="step" data-step="0">
+        <p class="st-no">01 · Edge</p>
+        <h3 class="st-title">Meet visitors where they are</h3>
+        <p>A global edge answers repeat requests from the location nearest each visitor, so your servers only see the work that actually needs them.</p>
+        <p class="st-try"><span>In the console</span>Switch <b>Global edge</b> on and watch packets turn around before they reach your load balancers.</p>
+      </li>
+      <li class="step" data-step="1">
+        <p class="st-no">02 · Compute</p>
+        <h3 class="st-title">A fleet that sizes itself</h3>
+        <p>Containers run behind regional load balancers. The autoscaler watches utilisation and adds or removes instances before anyone notices a slowdown.</p>
+        <p class="st-try"><span>In the console</span>Turn <b>Autoscale</b> off, then drag traffic past 30k and read the event log.</p>
+      </li>
+      <li class="step" data-step="2">
+        <p class="st-no">03 · Data</p>
+        <h3 class="st-title">Data that keeps up</h3>
+        <p>A managed relational database with read replicas, and an in-memory cache in front of it. Most reads never reach the disk; every write stays consistent on the primary.</p>
+        <p class="st-try"><span>In the console</span>Remove the <b>Managed cache</b> and watch p95 latency climb.</p>
+      </li>
+      <li class="step" data-step="3">
+        <p class="st-no">04 · Async</p>
+        <h3 class="st-title">Slow work, off the critical path</h3>
+        <p>Queues and workers take emails, exports and media processing out of the request, so a checkout never waits for a thumbnail to render.</p>
+        <p class="st-try"><span>In the console</span>Look for the white job packets peeling off towards <b>Queue + workers</b>.</p>
+      </li>
+      <li class="step" data-step="4">
+        <p class="st-no">05 · Observe</p>
+        <h3 class="st-title">See everything, page no one</h3>
+        <p>Metrics, traces and logs from every layer land on one timeline. Alerts fire on the symptoms customers feel, not on every blip.</p>
+        <p class="st-try"><span>In the console</span>Press <b>Simulate zone outage</b> and follow the recovery in the log.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ 03 DRILL ============ -->
+  <section class="drill" id="drill" aria-labelledby="drill-title">
+    <div class="drill-head">
+      <p class="kicker"><span class="k-no">03</span>Incident drill</p>
+      <h2 id="drill-title" class="h2">Ten minutes, one bad day</h2>
+      <p class="drill-lede">A zone fails at the worst possible moment. Scrub through the drill to see how the platform responds, second by second.</p>
+      <p class="chip">Simulated drill · illustrative timings</p>
+    </div>
+    <div class="drill-stage panel">
+      <svg class="drill-map" viewBox="0 0 640 300" role="img" aria-labelledby="drill-map-t" data-drill-map>
+        <title id="drill-map-t">Two availability zones behind a load balancer, each with app instances and a database.</title>
+        <g class="dz" data-zone="a">
+          <rect class="dz-box" x="40" y="96" width="250" height="180" rx="6"/>
+          <text class="dz-label" x="56" y="120">Zone A</text>
+          <g class="dz-inst"><rect x="60" y="140" width="34" height="34" rx="3"/><rect x="104" y="140" width="34" height="34" rx="3"/><rect x="148" y="140" width="34" height="34" rx="3"/><rect x="192" y="140" width="34" height="34" rx="3"/></g>
+          <g class="dz-db"><ellipse cx="96" cy="222" rx="30" ry="9"/><path d="M66 222v22c0 5 13 9 30 9s30-4 30-9v-22"/></g>
+          <text class="dz-role" x="140" y="244" data-role-a>Primary</text>
+        </g>
+        <g class="dz" data-zone="b">
+          <rect class="dz-box" x="350" y="96" width="250" height="180" rx="6"/>
+          <text class="dz-label" x="366" y="120">Zone B</text>
+          <g class="dz-inst"><rect x="370" y="140" width="34" height="34" rx="3"/><rect x="414" y="140" width="34" height="34" rx="3"/><rect x="458" y="140" width="34" height="34" rx="3"/><rect x="502" y="140" width="34" height="34" rx="3"/><rect class="extra" x="546" y="140" width="34" height="34" rx="3"/><rect class="extra" x="546" y="184" width="34" height="34" rx="3"/></g>
+          <g class="dz-db"><ellipse cx="406" cy="222" rx="30" ry="9"/><path d="M376 222v22c0 5 13 9 30 9s30-4 30-9v-22"/></g>
+          <text class="dz-role" x="450" y="244" data-role-b>Replica</text>
+        </g>
+        <g class="dlb"><rect x="270" y="18" width="100" height="40" rx="5"/><text x="320" y="43">Load balancer</text></g>
+        <path class="dl dl-a" d="M300 58v18H165v20"/>
+        <path class="dl dl-b" d="M340 58v18h135v20"/>
+        <path class="dl-rep" d="M126 230h250"/>
+      </svg>
+      <div class="drill-event" aria-live="polite">
+        <p class="de-time" data-de-time>T+00:00</p>
+        <h3 class="de-title" data-de-title>Steady state</h3>
+        <p class="de-text" data-de-text>Two zones share traffic evenly. The database primary lives in zone A with a synchronous replica in zone B.</p>
+        <dl class="de-stats"><div><dt>p95 latency</dt><dd data-de-lat>82 ms</dd></div><div><dt>Healthy instances</dt><dd data-de-inst>8</dd></div></dl>
+      </div>
+    </div>
+    <div class="drill-scrub">
+      <button type="button" class="btn btn-ghost drill-play" data-drill-play aria-pressed="false"><svg class="ic-play" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5v9l7.5-4.5z"/></svg><svg class="ic-pause" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5h2v9H3zM7 1.5h2v9H7z"/></svg><span data-drill-label>Play drill</span></button>
+      <div class="dtrack">
+        <svg class="dchart" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true" data-drill-chart><path class="dc-area"/><path class="dc-line"/><line class="dc-head" x1="0" x2="0" y1="0" y2="120"/></svg>
+        <div class="dmarks" data-drill-marks></div>
+        <label class="sr-only" for="drill-range">Drill time</label>
+        <input id="drill-range" class="drange" type="range" min="0" max="600" step="1" value="0" data-drill-range>
+        <div class="dticks" aria-hidden="true"><span>00:00</span><span>02:30</span><span>05:00</span><span>07:30</span><span>10:00</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 PLANS ============ -->
+  <section class="plans" id="plans" aria-labelledby="plans-title">
+    <div class="plans-head">
+      <div>
+        <p class="kicker"><span class="k-no">04</span>Plans</p>
+        <h2 id="plans-title" class="h2">Pay for the shape you need</h2>
+      </div>
+      <div class="plans-tools">
+        <div class="seg billing" role="group" aria-label="Billing period">
+          <button type="button" data-billing="monthly" aria-pressed="true">Monthly</button>
+          <button type="button" data-billing="annual" aria-pressed="false">Annual <small>−15%</small></button>
+        </div>
+        <div class="seg plan-pick" role="group" aria-label="Show plan">
+          <button type="button" data-show="starter" aria-pressed="false">Starter</button>
+          <button type="button" data-show="scale" aria-pressed="true">Scale</button>
+          <button type="button" data-show="orbit" aria-pressed="false">Orbit</button>
+        </div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="ptable" data-ptable data-show="scale">
+        <caption class="sr-only">NIMBUS plan comparison. Illustrative plans and prices for a fictional service.</caption>
+        <thead>
+          <tr>
+            <th scope="col" class="feat-h">What you get</th>
+            <th scope="col" data-col="starter"><span class="ph-name">Starter</span><span class="ph-price"><b data-price="49">€49</b><small>/month</small></span><span class="ph-for">One product, one region</span><span class="fit-badge">Fits your console setup</span></th>
+            <th scope="col" data-col="scale"><span class="ph-name">Scale</span><span class="ph-price"><b data-price="390">€390</b><small>/month</small></span><span class="ph-for">Growing teams, real traffic</span><span class="fit-badge">Fits your console setup</span></th>
+            <th scope="col" data-col="orbit"><span class="ph-name">Orbit</span><span class="ph-price"><b>Custom</b><small>annual contract</small></span><span class="ph-for">Global, regulated, always on</span><span class="fit-badge">Fits your console setup</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Regions</th><td data-col="starter">1</td><td data-col="scale">Up to 2</td><td data-col="orbit">Any</td></tr>
+          <tr><th scope="row">App instances</th><td data-col="starter">Up to 4</td><td data-col="scale">Up to 16</td><td data-col="orbit">No fixed limit</td></tr>
+          <tr><th scope="row">Autoscaling</th><td data-col="starter">Reactive</td><td data-col="scale">Reactive + scheduled</td><td data-col="orbit">Predictive</td></tr>
+          <tr><th scope="row">Global edge (CDN)</th><td data-col="starter">Add-on</td><td data-col="scale"><span class="yes">Included</span></td><td data-col="orbit"><span class="yes">Included</span> + private routes</td></tr>
+          <tr><th scope="row">Managed cache</th><td data-col="starter"><span class="no">Not included</span></td><td data-col="scale"><span class="yes">Included</span></td><td data-col="orbit"><span class="yes">Included</span></td></tr>
+          <tr><th scope="row">Read replicas</th><td data-col="starter"><span class="no">Not included</span></td><td data-col="scale">Up to 3 per region</td><td data-col="orbit">Custom topology</td></tr>
+          <tr><th scope="row">Queues + workers</th><td data-col="starter"><span class="no">Not included</span></td><td data-col="scale"><span class="yes">Included</span></td><td data-col="orbit"><span class="yes">Included</span></td></tr>
+          <tr><th scope="row">Guided incident drills</th><td data-col="starter"><span class="no">Not included</span></td><td data-col="scale">Twice a year</td><td data-col="orbit">Quarterly</td></tr>
+          <tr><th scope="row">Availability design target</th><td data-col="starter">99.9%</td><td data-col="scale">99.95%</td><td data-col="orbit">99.99%</td></tr>
+          <tr><th scope="row">Support</th><td data-col="starter">Email, business hours</td><td data-col="scale">Chat, around the clock</td><td data-col="orbit">Named architect</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fineprint">Illustrative plans and prices for a fictional service. Design targets describe how an architecture is built, not a contractual guarantee.</p>
+  </section>
+
+  <!-- ============ 05 MIGRATION ============ -->
+  <section class="migration" id="migration" aria-labelledby="mig-title">
+    <div class="mig-head">
+      <p class="kicker"><span class="k-no">05</span>Migration</p>
+      <h2 id="mig-title" class="h2">Moving in, in four moves</h2>
+      <p class="mig-lede">No big-bang weekend. Each move is reversible until the last one, and nothing switches over until it has handled real traffic.</p>
+    </div>
+    <ol class="mig-list">
+      <li class="mig">
+        <h3><button type="button" class="mig-btn" aria-expanded="true" aria-controls="mig-1"><span class="mig-no">01</span><span class="mig-t">Map</span><span class="mig-s">What you run today</span><span class="mig-ico" aria-hidden="true"></span></button></h3>
+        <div class="mig-body" id="mig-1"><p>We read your current setup with you and draw it in the console, warts and all. The first diagram is always the honest one.</p><ul><li>You bring: access to your current provider, a list of what wakes you at night</li><li>You get: a shared diagram and a plan you can reject</li></ul></div>
+      </li>
+      <li class="mig">
+        <h3><button type="button" class="mig-btn" aria-expanded="false" aria-controls="mig-2"><span class="mig-no">02</span><span class="mig-t">Mirror</span><span class="mig-s">Run both, side by side</span><span class="mig-ico" aria-hidden="true"></span></button></h3>
+        <div class="mig-body" id="mig-2" hidden><p>Your services run on NIMBUS alongside the old stack. A copy of real traffic flows through both, and we compare responses before anyone relies on the new path.</p><ul><li>Data replicates continuously from your current database</li><li>Nothing user-facing changes yet</li></ul></div>
+      </li>
+      <li class="mig">
+        <h3><button type="button" class="mig-btn" aria-expanded="false" aria-controls="mig-3"><span class="mig-no">03</span><span class="mig-t">Shift</span><span class="mig-s">Traffic moves in steps</span><span class="mig-ico" aria-hidden="true"></span></button></h3>
+        <div class="mig-body" id="mig-3" hidden><p>One percent, then ten, then half. Each step waits until error rates and latency look the same as before. Rolling back is one setting.</p><ul><li>Every step is logged in the console timeline</li><li>You decide when each step happens</li></ul></div>
+      </li>
+      <li class="mig">
+        <h3><button type="button" class="mig-btn" aria-expanded="false" aria-controls="mig-4"><span class="mig-no">04</span><span class="mig-t">Tune</span><span class="mig-s">Right-size what is left</span><span class="mig-ico" aria-hidden="true"></span></button></h3>
+        <div class="mig-body" id="mig-4" hidden><p>With real traffic on NIMBUS, we trim what you over-provisioned out of caution and set up drills so the next bad day is a rehearsal.</p><ul><li>Old infrastructure is retired only when you say so</li><li>Your first incident drill is on the calendar</li></ul></div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ 06 REVIEW ============ -->
+  <section class="review" id="review" aria-labelledby="review-title">
+    <div class="rv-copy">
+      <p class="kicker"><span class="k-no">06</span>Architecture review</p>
+      <h2 id="review-title" class="h2">Bring your whiteboard</h2>
+      <p class="rv-lede">Book a 45-minute session with a NIMBUS architect. Bring the diagram you have, or the console setup you just built, and leave with one you trust.</p>
+      <div class="rv-attach panel" aria-live="polite">
+        <p class="rva-k">Your console setup</p>
+        <p class="rva-v" data-config-summary>Loading the console…</p>
+      </div>
+    </div>
+    <form class="rv-form panel" id="review-form" novalidate>
+      <div class="field">
+        <label for="r-name">Full name</label>
+        <input id="r-name" type="text" autocomplete="name" required aria-describedby="r-name-err">
+        <p class="err" id="r-name-err" hidden></p>
+      </div>
+      <div class="field">
+        <label for="r-email">Work email</label>
+        <input id="r-email" type="email" autocomplete="email" required aria-describedby="r-email-err">
+        <p class="err" id="r-email-err" hidden></p>
+      </div>
+      <div class="field">
+        <label for="r-size">Team size</label>
+        <select id="r-size" required aria-describedby="r-size-err">
+          <option value="">Select</option>
+          <option>1–10 people</option>
+          <option>11–50 people</option>
+          <option>51–250 people</option>
+          <option>More than 250</option>
+        </select>
+        <p class="err" id="r-size-err" hidden></p>
+      </div>
+      <fieldset class="field" aria-describedby="r-now-err">
+        <legend>Where you run today</legend>
+        <div class="seg seg-wrap">
+          <label><input type="radio" name="now" value="On-premises"><span>On-premises</span></label>
+          <label><input type="radio" name="now" value="Another cloud"><span>Another cloud</span></label>
+          <label><input type="radio" name="now" value="Hybrid"><span>Hybrid</span></label>
+          <label><input type="radio" name="now" value="Starting fresh"><span>Starting fresh</span></label>
+        </div>
+        <p class="err" id="r-now-err" hidden></p>
+      </fieldset>
+      <div class="field">
+        <label for="r-notes">What keeps you up at night? <span class="opt">Optional</span></label>
+        <textarea id="r-notes" rows="3" maxlength="600"></textarea>
+      </div>
+      <label class="sw"><input id="r-attach" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span><span>Attach my console setup</span></label>
+      <button type="submit" class="btn btn-primary btn-wide">Request a review</button>
+      <div class="rv-done" data-done hidden tabindex="-1"></div>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <svg class="ft-mark" aria-hidden="true" focusable="false"><use href="#nb-mark"/></svg>
+      <p class="ft-tag">Your business, in the cloud.</p>
+      <p class="ft-blurb">NIMBUS is cloud infrastructure you can see: one console to design it, run it and understand what it costs.</p>
+    </div>
+    <nav class="ft-nav" aria-label="Footer">
+      <p class="ft-h">Index</p>
+      <ul>
+        <li><a href="#console">Console</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#drill">Incident drill</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#migration">Migration</a></li>
+        <li><a href="#review">Architecture review</a></li>
+      </ul>
+    </nav>
+    <div class="ft-credit">
+      <p class="ft-h">Build log</p>
+      <div class="credit panel">
+        <p class="cr-line"><span class="cr-k">author</span>Designed &amp; built by <a href="https://www.linkedin.com/in/saadbashirmarketing/" target="_blank" rel="noopener" aria-label="Saad Bashir on LinkedIn (opens in a new tab)">Saad Bashir</a></p>
+        <p class="cr-line"><span class="cr-k">status</span>Fictional concept brand — portfolio project.</p>
+        <p class="cr-line"><span class="cr-k">next</span><a class="cr-more" href="https://saadbashirportfolio.vercel.app/websites.html">More work →</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="ft-base">
+    <p>© 2026 NIMBUS. A concept: no real cloud provider, service or pricing.</p>
+    <a href="#console">Back to the console ↑</a>
+  </div>
+</footer>
+</body>
+</html>
